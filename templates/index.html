@@ -8,20 +8,16 @@
 </head>
 
 <body>
-
-  <ul id="messages"></ul>
-  <input id="myMessage" type="text">
-  <button id="send">Send</button>
-
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.min.js"></script>
+  <h1>Acces denied</h1>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.min.js"></script>
   <script>
     const socket = io("http://0.0.0.0:8000", { allowEIO3: true });
+  </script>
+</body>
 
-
-    socket.emit('message', 'hello')
-
+</html>
+    
+<!-- 
     socket.on('join', function (msg) { console.log("New Connection id: ", msg) });
 
     socket.on('message', function (msg) {
@@ -31,8 +27,13 @@
     $('#send').on('click', function () {
       socket.send($('#myMessage').val());
       $('#myMessage').val('');
-    })
-  </script>
-</body>
+    }) -->
 
-</html>
+
+  <!-- <ul id="messages"></ul>
+  <input id="myMessage" type="text">
+  <button id="send">Send</button>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  -->
