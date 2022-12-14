@@ -1,7 +1,12 @@
 import pymongo
-
+from dotenv import load_dotenv
+import os
+env_path=os.path.join('/home/dinux/DEVELOP/Pythoniso/Fast-API/flask','credentials.env')
+load_dotenv(env_path)
+SECRET_PHRASE=os.getenv('STRING_URL')
+print(SECRET_PHRASE)
 #!StringURL
-myclient= pymongo.MongoClient('mongodb://admin:asdasd@192.168.1.18:27017/?authMechanism=DEFAULT')
+myclient= pymongo.MongoClient(SECRET_PHRASE)
 
 #!SelectDatabase
 myDb=myclient['testDb']
