@@ -15,7 +15,7 @@ class MongoManager:
             from dotenv import load_dotenv
             from mongoengine import connect
             import os
-            env_path=os.path.join('/home/dinux/DEVELOP/Pythoniso/Fast-API/flask','credentials.env')
+            env_path=os.path.join('/flask','credentials.env')
             load_dotenv(env_path)
             SECRET_PHRASE=os.getenv('STRING_URL')
             from mongoengine import connect
